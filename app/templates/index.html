@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Backend UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+
+        .gradient-background {
+        background: linear-gradient(300deg, #00bfff, #750a8a, #0226b3);
+        background-size: 180% 180%;
+        animation: gradient-animation 18s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+        }
+    </style>
+</head>
+<body class="gradient-background">
+    <form action="/submit" method="post">
+        <label for="moisture">Moisture Level:</label>
+        <input type="number" id="moisture" name="moisture" required>
+
+        <label for="ph">pH Level:</label>
+        <input type="number" id="ph" name="ph" required>
+
+        <label for="nutrient">Nutrient Level:</label>
+        <input type="number" id="nutrient" name="nutrient" required>
+
+        <label for="temperature">Temperature:</label>
+        <input type="number" id="temperature" name="temperature" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
